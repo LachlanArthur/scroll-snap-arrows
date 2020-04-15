@@ -1,6 +1,6 @@
 {
   "name": "scroll-snap-arrows",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add arrows to CSS scroll-snap containers",
   "scripts": {
     "publish-pkg": "pika publish --no-tests",
