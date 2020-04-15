@@ -1,0 +1,36 @@
+{
+  "name": "scroll-snap-arrows",
+  "description": "Add arrows to CSS scroll-snap containers",
+  "version": "1.0.1",
+  "license": "MIT",
+  "files": [
+    "dist-*/",
+    "bin/"
+  ],
+  "pika": true,
+  "sideEffects": false,
+  "homepage": "https://github.com/LachlanArthur/scroll-snap-arrows#readme",
+  "bugs": {
+    "url": "https://github.com/LachlanArthur/scroll-snap-arrows/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LachlanArthur/scroll-snap-arrows.git"
+  },
+  "dependencies": {
+    "scroll-snap-api": "^1.0.1"
+  },
+  "devDependencies": {
+    "@pika/pack": "^0.5.0",
+    "@pika/plugin-build-node": "^0.9.2",
+    "@pika/plugin-build-web": "^0.9.2",
+    "@pika/plugin-bundle-web": "^0.9.2",
+    "@pika/plugin-ts-standard-pkg": "^0.9.2",
+    "typescript": "^3.8.3"
+  },
+  "source": "dist-src/index.js",
+  "types": "dist-types/index.d.ts",
+  "module": "dist-web/index.js",
+  "browser": "dist-web/index.bundled.js",
+  "main": "dist-node/index.js"
+}
