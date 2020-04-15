@@ -4,6 +4,8 @@ Add arrows to your scrollable elements that scroll to the next available snap po
 
 The arrow elements will automatically hide if there are no more snap positions available in its direction.
 
+## [Demo](https://lachlanarthur.github.io/scroll-snap-arrows/)
+
 ## Install
 
 ```shell
