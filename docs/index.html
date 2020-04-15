@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>scroll-snap-arrows demo</title>
+
+  <link rel="stylesheet" href="./demo.css">
+
+</head>
+
+<body>
+
+  <h1><a href="https://github.com/LachlanArthur/scroll-snap-arrows">scroll-snap-arrows</a> demo</h1>
+
+  <p>Add navigation arrows that scroll to the next snap position</p>
+
+  <h2>Examples</h2>
+
+  <h3>Vertical scroll</h3>
+
+  <div id="example-vertical" class="scrollable-container">
+    <div class="scrollable scrollable-y"
+      data-scroll-snap-arrow-up="#example-vertical button.-up"
+      data-scroll-snap-arrow-down="#example-vertical button.-down"
+    >
+      <div class="placeholder">1</div>
+      <div class="placeholder">2</div>
+      <div class="placeholder">3</div>
+      <div class="placeholder">4</div>
+      <div class="placeholder">5</div>
+    </div>
+    <button class="-up">⏫</button>
+    <button class="-down">⏬</button>
+  </div>
+
+  <h3>Horizontal scroll</h3>
+
+  <div id="example-horizontal" class="scrollable-container">
+    <div class="scrollable scrollable-x"
+      data-scroll-snap-arrow-left="#example-horizontal button.-left"
+      data-scroll-snap-arrow-right="#example-horizontal button.-right"
+    >
+      <div class="placeholder">1</div>
+      <div class="placeholder">2</div>
+      <div class="placeholder">3</div>
+      <div class="placeholder">4</div>
+      <div class="placeholder">5</div>
+    </div>
+    <button class="-left">⏪</button>
+    <button class="-right">⏩</button>
+  </div>
+
+  <h3>Both</h3>
+
+  <div id="example-both" class="scrollable-container">
+    <div class="scrollable scrollable-xy"
+      data-scroll-snap-arrow-left="#example-both button.-left"
+      data-scroll-snap-arrow-right="#example-both button.-right"
+      data-scroll-snap-arrow-up="#example-both button.-up"
+      data-scroll-snap-arrow-down="#example-both button.-down"
+    >
+      <div class="placeholder">1</div>
+      <div class="placeholder">2</div>
+      <div class="placeholder">3</div>
+      <div class="placeholder">4</div>
+      <div class="placeholder">5</div>
+
+      <div class="placeholder">6</div>
+      <div class="placeholder">7</div>
+      <div class="placeholder">8</div>
+      <div class="placeholder">9</div>
+      <div class="placeholder">10</div>
+
+      <div class="placeholder">11</div>
+      <div class="placeholder">12</div>
+      <div class="placeholder">13</div>
+      <div class="placeholder">14</div>
+      <div class="placeholder">15</div>
+
+      <div class="placeholder">16</div>
+      <div class="placeholder">17</div>
+      <div class="placeholder">18</div>
+      <div class="placeholder">19</div>
+      <div class="placeholder">20</div>
+
+      <div class="placeholder">21</div>
+      <div class="placeholder">22</div>
+      <div class="placeholder">23</div>
+      <div class="placeholder">24</div>
+      <div class="placeholder">25</div>
+    </div>
+    <button class="-left">⏪</button>
+    <button class="-right">⏩</button>
+    <button class="-up">⏫</button>
+    <button class="-down">⏬</button>
+  </div>
+
+  <h3>Manually attach arrows</h3>
+
+  <div id="example-manual" class="scrollable-container">
+    <div class="scrollable scrollable-x">
+      <div class="placeholder">1</div>
+      <div class="placeholder">2</div>
+      <div class="placeholder">3</div>
+      <div class="placeholder">4</div>
+      <div class="placeholder">5</div>
+    </div>
+    <button class="-left">⏪</button>
+    <button class="-right">⏩</button>
+  </div>
+
+  <script type="module">
+
+    import { ScrollSnapArrows } from 'https://cdn.pika.dev/scroll-snap-arrows';
+
+    new ScrollSnapArrows( document.querySelector( '#example-vertical .scrollable' ) );
+    new ScrollSnapArrows( document.querySelector( '#example-horizontal .scrollable' ) );
+    new ScrollSnapArrows( document.querySelector( '#example-both .scrollable' ) );
+
+    const manual = new ScrollSnapArrows( document.querySelector( '#example-manual .scrollable' ) );
+    manual.addArrow( 'left', document.querySelector( '#example-manual button.-left' ) );
+    manual.addArrow( 'right', document.querySelector( '#example-manual button.-right' ) );
+
+  </script>
+
+</body>
+
+</html>
