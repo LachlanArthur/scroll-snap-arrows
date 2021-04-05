@@ -1,7 +1,7 @@
 {
   "name": "scroll-snap-arrows",
   "description": "Add arrows to CSS scroll-snap containers",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "files": [
     "dist-*/",

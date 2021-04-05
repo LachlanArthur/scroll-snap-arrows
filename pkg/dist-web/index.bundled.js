@@ -160,10 +160,12 @@ function getSnapPositions(parent) {
     }
   };
   var descendants = getAllDescendants(parent);
-  ['x', 'y'].forEach(axis => {
+
+  for (var axis of ['x', 'y']) {
     var orthogonalAxis = axis === 'x' ? 'y' : 'x';
-    var offsetStart = axis === 'x' ? 'offsetLeft' : 'offsetTop';
-    var offsetSize = axis === 'x' ? 'offsetWidth' : 'offsetHeight';
+    var axisStart = axis === 'x' ? 'left' : 'top';
+    var axisSize = axis === 'x' ? 'width' : 'height';
+    var axisScroll = axis === 'x' ? 'scrollLeft' : 'scrollTop';
 
     for (var child of descendants) {
       var childRect = child.getBoundingClientRect(); // Skip child if it doesn't intersect the parent's opposite axis (it can never be in view)
@@ -180,25 +182,27 @@ function getSnapPositions(parent) {
       }
 
       var childAlign = axis === 'x' ? childAlignX : childAlignY;
+      var childOffsetStart = childRect[axisStart] - parentRect[axisStart] + parent[axisScroll];
 
       switch (childAlign) {
         case 'none':
           break;
 
         case 'start':
-          positions[axis].start.push(child[offsetStart]);
+          positions[axis].start.push(childOffsetStart);
           break;
 
         case 'center':
-          positions[axis].center.push(child[offsetStart] + child[offsetSize] / 2);
+          positions[axis].center.push(childOffsetStart + childRect[axisSize] / 2);
           break;
 
         case 'end':
-          positions[axis].end.push(child[offsetStart] + child[offsetSize]);
+          positions[axis].end.push(childOffsetStart + childRect[axisSize]);
           break;
       }
     }
-  });
+  }
+
   return positions;
 }
 
