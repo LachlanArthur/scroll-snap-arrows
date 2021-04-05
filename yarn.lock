@@ -3102,9 +3102,9 @@ scoped-regex@^2.0.0:
   integrity sha512-g3WxHrqSWCZHGHlSrF51VXFdjImhwvH8ZO/pryFH56Qi0cDsZfylQa/t0jCzVQFNbNvM00HfHjkDPEuarKDSWQ==
 
 scroll-snap-api@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/scroll-snap-api/-/scroll-snap-api-1.0.1.tgz#528032417a1abe610136ffd222ee7413785e6251"
-  integrity sha512-2XEtrHSgQvGhaw2q/XqamHZYwS+X7f77FJEWBRGCNyLz2AuBig0kOueC6d9fJ8RWHiSK/ODIVunRlOa4HltpRA==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/scroll-snap-api/-/scroll-snap-api-1.0.2.tgz#e016dac360a7af8e815525a035b6056c076005c0"
+  integrity sha512-MRYDydb4sPIma744L682TmeXQaR7pgWFJArMCsgJB08tUnjZjxz5Y7U84l6+lPRALQZW2STzqJ8NXvHfy7WcfQ==
 
 semver-diff@^2.0.0:
   version "2.1.0"
